@@ -19,7 +19,7 @@ class Process:
         try:
             return cls(proc.pid, proc.name(), proc.exe(), proc.status())
         except psutil.AccessDenied:
-            print(f"Access denied for PID {proc.pid} ({proc.name()})")
+            print(f'Access denied for PID {proc.pid} ({proc.name()})')
         except psutil.NoSuchProcess:
             return None
 
