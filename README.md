@@ -2,21 +2,6 @@
 
 Проект Process Information Catcher (pid_catcher) представляет собой инструмент на Python для мониторинга и управления процессами операционной системы с использованием библиотеки psutil. Проект структурирован для обработки различных аспектов работы с процессами через командную строку.
 
-## Структура проекта
-
-```bash
-pid_catcher
-├── src
-│   ├── handlers
-│   │   └── flag_router.py
-│   ├── models
-│   │   ├── process.py
-│   │   └── process_counter.py
-│   └── services
-│       ├── a_flag_service.py
-│       └── s_flag_service.py
-└── main.py
-```
 ## Основные компоненты
 
 - ### cli_router.py: 
