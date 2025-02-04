@@ -1,6 +1,6 @@
 import argparse
-from ..services.a_flag_service import a_flag_service
-from ..services.s_flag_service import s_flag_service
+from ..services.show_all_process_service import show_all_processes
+from ..services.sum_of_process import sum_of_process
 
 def router():
     parser = argparse.ArgumentParser()
@@ -10,7 +10,7 @@ def router():
     args = parser.parse_args()
 
     if args.all:
-        a_flag_service()
+        show_all_processes()
 
     if args.sum:
-        s_flag_service()
+        sum_of_process()

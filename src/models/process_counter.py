@@ -10,22 +10,22 @@ class ProcessCounter:
         self._zombie = 0
         init()
 
-    def increase_running(self):
+    def increment_running(self):
         self._running += 1
 
-    def increase_waiting(self):
+    def increment_waiting(self):
         self._waiting += 1
 
-    def increase_stopped(self):
+    def increment_stopped(self):
         self._stopped += 1
 
-    def increase_dead(self):
+    def increment_dead(self):
         self._dead += 1
 
-    def increase_sleeping(self):
+    def increment_sleeping(self):
         self._sleeping += 1
 
-    def increase_zombie(self):
+    def increment_zombie(self):
         self._zombie += 1
 
     def __str__(self):

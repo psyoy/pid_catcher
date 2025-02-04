@@ -20,7 +20,9 @@ class Process:
             return cls(proc.pid, proc.name(), proc.exe(), proc.status())
         except psutil.AccessDenied:
             print(f'Access denied for PID {proc.pid} ({proc.name()})')
+            return None
         except psutil.NoSuchProcess:
+            print(f"Can't find PID {proc.pid}")
             return None
 
     def get_edited_pid(self):

@@ -1,7 +1,7 @@
 import psutil
 from ..models.process_counter import ProcessCounter
 
-def s_flag_service():
+def sum_of_process():
     process_counter = ProcessCounter()
 
     pids = psutil.pids()
@@ -10,14 +10,14 @@ def s_flag_service():
         proc = psutil.Process(pid)
 
         if proc.status() == psutil.STATUS_RUNNING:
-            process_counter.increase_running()
+            process_counter.increment_running()
         elif proc.status() == psutil.STATUS_WAITING:
-            process_counter.increase_waiting()
+            process_counter.increment_waiting()
         elif proc.status() == psutil.STATUS_DEAD:
-            process_counter.increase_dead()
+            process_counter.increment_dead()
         elif proc.status() == psutil.STATUS_SLEEPING:
-            process_counter.increase_sleeping()
+            process_counter.increment_sleeping()
         elif proc.status() == psutil.STATUS_ZOMBIE:
-            process_counter.increase_zombie()
+            process_counter.increment_zombie()
 
     print(process_counter)
