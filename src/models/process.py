@@ -14,7 +14,7 @@ class Process:
 
     @classmethod
     def from_psutil_proc(cls, proc):
-        if proc.pid == 0:
+        if proc.pid in (0, 1):
             return None
         try:
             return cls(proc.pid, proc.name(), proc.exe(), proc.status())
