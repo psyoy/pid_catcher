@@ -1,7 +1,4 @@
-import psutil
-from src.models.process import Process
+from src.handlers.flag_router import router
 
 if __name__ == "__main__":
-    for proc in psutil.process_iter(['pid', 'name', 'exe', 'status']):
-        process = Process.from_psutil_proc(proc)
-        print(process)
+    router()
